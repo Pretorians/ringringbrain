@@ -8,7 +8,7 @@ class Picas
     def initialized 
     end
     
-    def comparar numeingre, numeadiv, cantInt
+    def comparar numeingre, numeadiv, cantInt=1
         @numeroingresado = numeingre
         @numeroadivinar = numeadiv
         
