@@ -4,12 +4,12 @@ Feature:
     Para intentar adivinar
     
 Scenario: Ingresar el numero
-      Given inicia el juego
+      Given Abrir pagina
       When  ingresar el "numero"
        And  presionar el boton adivinar
       Then "Resultado"
        
 Scenario: Reiniciar al juego
-      Given inicia el juego
+      Given Abrir pagina
       When Hacer clic en el boton reiniciar
       Then "Bienvenidos al Juegos de Picas"
