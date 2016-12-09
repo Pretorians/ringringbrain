@@ -40,7 +40,11 @@ class Picas
         puts "conting #{ conting }"
         puts "contadv #{ contadv }"        
         
-        return "Fijas - #{ fijas } v Picas - #{ picas }"
+        if fijas == arrAdv.size
+            return "Ganastes"
+        else
+            return "Fijas - #{ fijas } v Picas - #{ picas }"
+        end    
     end   
     
     def numero
