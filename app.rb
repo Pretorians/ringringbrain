@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'better_errors'
+require './lib/picas'
 
 configure :development do
   use BetterErrors::Middleware
@@ -13,3 +14,13 @@ get '/' do
 	erb :inicio
 end
 
+post '/jugar' do
+  session["picas"]=Picas.new
+  #Picas.aleatorio
+  session["picas"].aleatorio
+  erb :juego
+end 
+
+post '/resultado' do
+  erb :resultado
+end 

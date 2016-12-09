@@ -6,4 +6,4 @@ Feature:
 Scenario: iniciar juego
     Given abro la aplicación
     When inicio juego
-    Then veo "ya tengo un numero, adivinalo"
+    Then veo "Ya tengo un numero adivinalo"
