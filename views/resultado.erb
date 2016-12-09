@@ -3,7 +3,6 @@
         <title>Resultado</title>
     </head>
     <body>
-        <h1>El numero correcto es <%= session["telefono"]%></h1>
         <h1>Resultado <%= session["resultado"]%></h1>
         <form method="post" action="/juego">
             <input type="hidden" name="telefono" value="<%= session["telefono"]%>">
