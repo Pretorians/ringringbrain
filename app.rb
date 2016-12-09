@@ -15,6 +15,7 @@ get '/' do
 end
 
 post '/juego' do
+  session["telefono"]=params["telefono"]
   session["picas"]=Picas.new
   session["picas"].aleatorio
   erb :juego

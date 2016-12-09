@@ -4,10 +4,18 @@
     </head>
     <body>
         <h1>Ya tengo un numero adivinalo</h1>
-        <%= session["picas"].numero %>
+        <%= session["telefono"] %>
         <form method="post" action="/resultado">
-            <label>Numero a adivinar: </label><input type="text" name="numero">
-            <input type="submit" name="inicio" value="Validar">
+            <label>Numero a adivinar: </label>
+            <input type="text" name="numero1" maxlength="1" size="1">
+            <input type="text" name="numero2" maxlength="1" size="1">
+            <input type="text" name="numero3" maxlength="1" size="1">
+            <input type="text" name="numero4" maxlength="1" size="1">
+            <input type="submit" name="adivinar" value="Adivinar">
+            
+        </form>
+        <form method="get" action="/">
+            <input type="submit" name="volver" value="volver">
         </form>
     </body>
 </html>

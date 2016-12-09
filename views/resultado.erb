@@ -3,7 +3,7 @@
         <title>Resultado</title>
     </head>
     <body>
-        <h1><%= session["picas"].resultado%></h1>
+        <h1>El numero correcto es <%= session["telefono"]%></h1>
         <form method="post" action="/juego">
              <input type="submit" name="inicio" value="volver a intentar">
         </form>

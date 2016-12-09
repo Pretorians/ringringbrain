@@ -9,5 +9,6 @@ Scenario: Ingresar a la Pagina de Inicio
       
 Scenario: Iniciar al juego
       Given Abrir pagina
-      When Hacer clic en el boton Start
-      Then "Ya tengo el numero aleatorio"
+      When Hacer clic en el boton "start"
+      Then "Ya tengo un numero adivinalo"
+      

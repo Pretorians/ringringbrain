@@ -10,11 +10,11 @@ Then(/^"([^"]*)"$/) do |text|
  expect(page.body).to match /#{text}/m
 end
 
-When(/^Hacer clic en el boton Start$/) do
-   click_button(start)
-<<<<<<< HEAD
+When(/^Hacer clic en el boton "([^"]*)"$/) do |start|
+  click_button(start)
 end
-=======
-  end
 
->>>>>>> 5d985d53cf0fd027e1c736d9474bfc9f127ee2e8
+When(/^Seleccionar mama$/) do
+   select "mama", :from => "telefono"
+end
+
