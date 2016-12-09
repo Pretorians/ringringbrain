@@ -9,6 +9,7 @@ Scenario: Ingresar a la Pagina de Inicio
       
 Scenario: Iniciar al juego
       Given Abrir pagina
+        And Seleccionar mama
       When Hacer clic en el boton "start"
       Then "Ya tengo un numero adivinalo"
       

@@ -17,10 +17,12 @@ end
 post '/juego' do
   session["telefono"]=params["telefono"]
   session["picas"]=Picas.new
-  session["picas"].aleatorio
   erb :juego
 end 
 
 post '/resultado' do
+  input=params["numeroingresado"]
+  telefono=session["telefono"]
+  session["resultado"]= session["picas"].comparar input, telefono
   erb :resultado
 end 

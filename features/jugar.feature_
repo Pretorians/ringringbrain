@@ -5,11 +5,8 @@ Feature:
     
 Scenario: Ingresar el numero
       Given Abrir pagina
-      When  ingresar el "numero"
-       And  presionar el boton adivinar
+        And  ingresar el "1234"
+      When  presionar el boton adivinar
       Then "Resultado"
        
-Scenario: Reiniciar al juego
-      Given Abrir pagina
-      When Hacer clic en el boton reiniciar
-      Then "Bienvenidos al Juegos de Picas"
+
