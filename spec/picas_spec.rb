@@ -37,11 +37,11 @@ describe Picas do
         expect(resultado).to eq "Fijas - 1 v Picas - 0"
     end
     
-    it "comparar si los 2 digitos ingresado solo uno es fija" do
+    it "comparar si los 4 digitos ingresado solo uno es fija" do
         #arrage
         picas = Picas.new
         #act
-        resultado = picas.comparar 26,25
+        resultado = picas.comparar 1387,2345
         #assert
         expect(resultado).to eq "Fijas - 1 v Picas - 0"
     end    

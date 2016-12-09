@@ -31,10 +31,14 @@ class Picas
                 conting = conting + 1
             end
             contadv = contadv + 1
+            conting = 0
         end
         
         puts "Picas #{ picas }"
         puts "Fijas #{ picas }"
+        
+        puts "conting #{ conting }"
+        puts "contadv #{ contadv }"        
         
         return "Fijas - #{ fijas } v Picas - #{ picas }"
     end   
