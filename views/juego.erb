@@ -9,7 +9,8 @@
             <input type="text" name="numeroingresado" maxlength="4" size="4">
             <input type="hidden" name="self" value="true">
             <input type="hidden" name="telefono" value="<%= session["telefono"]%>">
-            <input type="submit" name="adivinar" value="adivinar">
+            
+            <input type="submit" name="adivinar" value="adivinar" style="<%= session["fin"] %>">
         </form>
         
         <h2>HISTORIAL</h2>
