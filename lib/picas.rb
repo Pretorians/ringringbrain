@@ -2,10 +2,13 @@ class Picas
 
     @numeroingresado = 0
     @numeroadivinar=0
+    
+    INTENTOS=9
+    
     def initialized 
     end
     
-    def comparar numeingre, numeadiv
+    def comparar numeingre, numeadiv, cantInt
         @numeroingresado = numeingre
         @numeroadivinar = numeadiv
         
@@ -17,6 +20,7 @@ class Picas
         conting=0
         contadv=0
         
+
         while contadv < arrAdv.size do
             digadv = arrAdv[contadv]
             while conting < arrIng.size do
@@ -39,12 +43,19 @@ class Picas
         
         puts "conting #{ conting }"
         puts "contadv #{ contadv }"        
-        
+    
+    result = ""
+    if INTENTOS == cantInt 
+        result = "|TERMINASTES"
+    end
         if fijas == arrAdv.size
-            return "Ganastes"
+            return "Ganastes" + result
         else
-            return "Fijas - #{ fijas } v Picas - #{ picas }"
+            return "Fijas - #{ fijas } v Picas - #{ picas }" + result
         end    
+        
+    
+        
     end   
     
     def numero
