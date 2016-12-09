@@ -7,7 +7,7 @@ describe Picas do
         #act
         resultado = picas.comparar 5,5
         #assert
-        expect(resultado).to eq "Ganastes"
+        expect(resultado).to eq "GANASTE"
     end
     
     it "comparar si el primer digito ingresado es diferente al primer digito adivina es igual" do
@@ -25,7 +25,7 @@ describe Picas do
         #act
         resultado = picas.comparar 25,25
         #assert
-        expect(resultado).to eq "Ganastes"
+        expect(resultado).to eq "GANASTE"
     end
     
     it "comparar si los 2 digitos ingresado solo uno es fija" do
@@ -52,7 +52,16 @@ describe Picas do
         #act
         resultado = picas.comparar 4367,4367
         #assert
-        expect(resultado).to eq "Ganastes"
+        expect(resultado).to eq "GANASTE"
+    end  
+    
+     it "Validar que se supero el numero de intentos" do
+        #arrage
+        picas = Picas.new
+        #act
+        resultado = picas.validar 5
+        #assert
+        expect(resultado).to eq true
     end  
     
 end
