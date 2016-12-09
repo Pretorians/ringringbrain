@@ -14,7 +14,7 @@ get '/' do
 	erb:index
 end
 
-post '/jugar' do
+post '/juego' do
   session["picas"]=Picas.new
   #Picas.aleatorio
   session["picas"].aleatorio
