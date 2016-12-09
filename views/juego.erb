@@ -4,16 +4,18 @@
     </head>
     <body>
         <h1>Ya tengo un numero adivinalo</h1>
-        <form method="post" action="/resultado">
+        <form method="post" action="/juego">
             <label>Numero a adivinar: </label>
             <input type="text" name="numeroingresado" maxlength="4" size="4">
+            <input type="hidden" name="self" value="true">
+            <input type="hidden" name="telefono" value="<%= session["telefono"]%>">
             <input type="submit" name="adivinar" value="adivinar">
         </form>
         
         <h2>HISTORIAL</h2>
-        <span>
-            <%= session["historial"]%>
-        </span>
+        <%= session["historial"]%>
+        
+        <br>
         <form method="get" action="/">
             <input type="submit" name="volver" value="Empezar de nuevo">
         </form>

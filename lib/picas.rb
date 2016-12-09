@@ -44,12 +44,12 @@ class Picas
         puts "conting #{ conting }"
         puts "contadv #{ contadv }"        
     
-    result = ""
-    if INTENTOS == cantInt 
-        result = "|TERMINASTES"
-    end
+        result = ""
+        if INTENTOS == cantInt 
+            result = "|TERMINASTE"
+        end
         if fijas == arrAdv.size
-            return "Ganastes" + result
+            return "GANASTE" + result
         else
             return "Fijas - #{ fijas } v Picas - #{ picas }" + result
         end    
