@@ -22,9 +22,11 @@ class Picas
             while conting < arrIng.size do
                 diging = arrIng[conting]
                 if digadv == diging && contadv == conting
-                    fijas = fijas + 1          
-                else 
+                    fijas = fijas + 1
+                    break;
+                elsif digadv == diging
                     picas = picas + 1
+                    break;
                 end     
                 conting = conting + 1
             end
@@ -32,9 +34,9 @@ class Picas
         end
         
         puts "Picas #{ picas }"
-        puts "Fijas #{ fijas }"
+        puts "Fijas #{ picas }"
         
-        true
+        return "Fijas - #{ fijas } v Picas - #{ picas }"
     end   
     
     def numero
