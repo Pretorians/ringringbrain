@@ -9,6 +9,6 @@ Scenario: Ingresar el numero
         And Hacer clic en el boton "start"
         And  ingresar el "1234"
       When  presionar el boton adivinar
-      Then "Resultado"
+      Then "Ya tengo un numero adivinalo"
        
 
