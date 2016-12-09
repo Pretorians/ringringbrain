@@ -4,8 +4,9 @@
     </head>
     <body>
         <h1>Ya tengo un numero adivinalo</h1>
+        <%= session["picas"].numero %>
         <form method="post" action="/jugar">
-            <input type="submit" name="inicio" value="inicio">
+            <%= session["picas"].numero %>
         </form>
     </body>
 </html>
