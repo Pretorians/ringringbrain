@@ -1,8 +1,41 @@
 class Picas
 
-    def initialized
-        @numaleatorio=0
+    @numeroingresado = 0
+    @numeroadivinar=0
+    def initialized 
     end
+    
+    def comparar numeingre, numeadiv
+        @numeroingresado = numeingre
+        @numeroadivinar = numeadiv
+        
+        arrIng = numeingre.to_s.split ""
+        arrAdv = numeadiv.to_s.split ""
+        
+        picas=0
+        fijas=0
+        conting=0
+        contadv=0
+        
+        while contadv < arrAdv.size do
+            digadv = arrAdv[contadv]
+            while conting < arrIng.size do
+                diging = arrIng[conting]
+                if digadv == diging && contadv == conting
+                    fijas = fijas + 1          
+                else 
+                    picas = picas + 1
+                end     
+                conting = conting + 1
+            end
+            contadv = contadv + 1
+        end
+        
+        puts "Picas #{ picas }"
+        puts "Fijas #{ fijas }"
+        
+        true
+    end   
     
     def numero
         @numaleatorio
@@ -17,5 +50,6 @@ class Picas
       puts @numeroaleatorio
     end
     
+
     
 end
