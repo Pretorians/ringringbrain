@@ -16,7 +16,6 @@ end
 
 post '/juego' do
   session["picas"]=Picas.new
-  #Picas.aleatorio
   session["picas"].aleatorio
   erb :juego
 end 
