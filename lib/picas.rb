@@ -3,9 +3,17 @@ class Picas
     @numeroingresado = 0
     @numeroadivinar=0
     
-    INTENTOS=9
+    INTENTOS=5
     
     def initialized 
+    end
+    
+    def validar cantInt=1
+        if INTENTOS==cantInt
+            return true
+        else
+            return false
+        end  
     end
     
     def comparar numeingre, numeadiv, cantInt=1
