@@ -11,6 +11,7 @@ enable :sessions
 set :session_secret, 'thisIsAKleerSecret'
 
 get '/' do
+  session["historial"]=""
 	erb:index
 end
 
@@ -22,7 +23,9 @@ end
 
 post '/resultado' do
   input=params["numeroingresado"]
+  puts "inputtt=> " + input
   telefono=session["telefono"]
   session["resultado"]= session["picas"].comparar input, telefono
+  session["historial"]=session["historial"] + input + " - " + session["resultado"] + "<br> "
   erb :resultado
 end 
