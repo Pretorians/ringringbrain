@@ -27,6 +27,7 @@ post '/juego' do
     telefono=session["telefono"]
     intentos=session["intentos"]
     session["resultado"]= session["picas"].comparar input, telefono, intentos
+    #session["fin"]= session["picas"].validar intentos
     session["historial"]=session["historial"] + "<table style='border:1px;font-size:20px;'><tr><td>" + input + "</td><td>" + session["resultado"] + "</td></tr></table>"
   end
 
