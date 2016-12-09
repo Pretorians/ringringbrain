@@ -10,5 +10,6 @@ enable :sessions
 set :session_secret, 'thisIsAKleerSecret'
 
 get '/' do
-	
+	erb:index
 end
+
